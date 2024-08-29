@@ -2,7 +2,9 @@
 
 Un proyecto de red social para dar a conocer a los chismes de Uleam.
 
+## Descripción
 
+El proyecto consiste en un sitio web que permite a los chismes de Uleam conocer a los demás chismes de Uleam y a sus amigos. Este sitio web se puede acceder a través de [chismeuleam.com](https://chismeuleam.com).
 ## Instalación
 
 Para instalar el proyecto, se debe clonar el repositorio y ejecutar el siguiente comando:
@@ -28,3 +30,9 @@ El proyecto está desarrollado en Django, por lo que se puede acceder a la docum
 - [@Soquel Miquel Muñiz](https://github.com/lesquel)
 - [@SteveSant26 Bryan Menocal](https://github.com/SteveSant26)
 - [@jandryvV Jandry](https://github.com/jandryvV)
+
+## Donaciones
+
+Si te gusta este proyecto, puedes apoyarme con una donación a través de [Patreon](https://www.patreon.com/chismeuleam).
+
+[![Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/chismeuleam)
