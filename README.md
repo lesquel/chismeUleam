@@ -22,3 +22,9 @@ $ python manage.py runserver
 ## Desarrollo
 
 El proyecto está desarrollado en Django, por lo que se puede acceder a la documentación oficial de Django para obtener información sobre el desarrollo de aplicaciones web con este framework.
+
+## Contribuidores
+
+- [@Soquel Miquel Muñiz](https://github.com/lesquel)
+- [@SteveSant26 Bryan Menocal](https://github.com/SteveSant26)
+- [@jandryvV Jandry](https://github.com/jandryvV)
