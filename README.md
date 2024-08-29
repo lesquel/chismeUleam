@@ -33,6 +33,6 @@ El proyecto está desarrollado en Django, por lo que se puede acceder a la docum
 
 ## Donaciones
 
-Si te gusta este proyecto, puedes apoyarme con una donación a través de [Patreon](https://www.patreon.com/chismeuleam).
+Si te gusta este proyecto, puedes apoyarmos con una donación a través de Patreon.
 
 [![Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/chismeuleam)
