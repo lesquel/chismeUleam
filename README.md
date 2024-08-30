@@ -1,9 +1,8 @@
-# chismeUleam
-
+# chismeUleam   
+    
 Un proyecto de red social para dar a conocer a los chismes de Uleam.
 
 ## Descripción
-
 El proyecto consiste en un sitio web que permite a los chismes de Uleam conocer a los demás chismes de Uleam y a sus amigos. Este sitio web se puede acceder a través de [chismeuleam.com](https://chismeuleam.com).
 ## Instalación
 
