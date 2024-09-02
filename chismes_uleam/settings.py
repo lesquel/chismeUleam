@@ -38,13 +38,13 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-  # other Django apps
-  'tailwind',
-  'theme',
-  'django_browser_reload',
+    # other Django apps
+    'tailwind',
+    'theme',
+    'django_browser_reload',
 
-  # custom apps
-  'register',
+    # custom apps
+    'register',
 ]
 
 # Tailwind config

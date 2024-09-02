@@ -42,7 +42,35 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                naranja_claro: {
+                    light: "#F09E6A",
+                    DEFAULT: "#F09E6A",
+                    dark: "#F09E6A",
+                },
+                verder_claro: {
+                    light: "#4A7766",
+                    DEFAULT: "#4A7766",
+                    dark: "#4A7766",
+                },
+                negro: {
+                    light: "#001219",
+                    DEFAULT: "#001219",
+                    dark: "#001219",
+                },
+                ese_color: {
+                    light: "#E3E3E3",
+                    DEFAULT: "#E3E3E3",
+                    dark: "#E3E3E3",
+                },
+                blanco: {
+                    light: "#ECE7E2",
+                    DEFAULT: "#ECE7E2",
+                    dark: "#ECE7E2",
+                },
+            },
+        },
     },
     plugins: [
         /**
