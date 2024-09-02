@@ -26,9 +26,9 @@ El proyecto está desarrollado en Django, por lo que se puede acceder a la docum
 
 ## Contribuidores
 
-- [@Soquel Miquel Muñiz](https://github.com/lesquel) - Desarrollador
-- [@SteveSant26 Bryan Menocal](https://github.com/SteveSant26) - Desarrollador
-- [@jandryvV Jandry](https://github.com/jandryvV) - Desarrollador
+- [@Soquel - Miquel Muñiz](https://github.com/lesquel) - Desarrollador
+- [@SteveSant26 - Bryan Menocal](https://github.com/SteveSant26) - Desarrollador
+- [@jandryvV - Jandry](https://github.com/jandryvV) - Desarrollador
 
 ## Donaciones
 
