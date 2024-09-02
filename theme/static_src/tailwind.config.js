@@ -43,6 +43,11 @@ module.exports = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                matemasie: ["Matemasie", "sans-serif"],
+                popins: ["Poppins", "sans-serif"],
+                Courier_New: ["Courier New", "sans-serif"],
+            },
             colors: {
                 naranja_claro: {
                     light: "#F09E6A",
