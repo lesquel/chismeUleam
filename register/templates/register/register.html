@@ -1,5 +1,6 @@
 {% extends 'baseRegiter.html' %}
 
+{% block title %}Registro{% endblock %}
 
 {% block content %}
 <section class="h-auto">
@@ -13,7 +14,7 @@
                 {% include 'components/Input.html' with id="password2" name="password2" label="Confirme su contraseña" type="password" %}
 
                 <p class="flex justify-center gap-4 items-center my-2">
-                    <input  type="checkbox" name="terminos" id="terminos">
+                    <input class=""  type="checkbox" name="terminos" id="terminos">
                     <span>Acepta los terminos y condiciones</span>
                 </p>
 
