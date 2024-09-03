@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+    .transition-sacale-102 {
+        @apply transition-transform duration-200 hover:scale-[1.02];
+    }
+  }
