@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 # Create your views here.
-def RegiterView(request):
+def RegisterView(request):
     return render(request, 'pages/register/register.html')
