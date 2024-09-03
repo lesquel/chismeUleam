@@ -55,6 +55,7 @@ INTERNAL_IPS = [
 # NPM_BIN_PATH = "C:/Users/hola2/AppData/Roaming/npm/npm.cmd"
 NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
