@@ -1,23 +1,22 @@
 {% extends "register/layout/base_register.html" %}
 {% block title %}
-    Registro
+    Login | CHISMES ULEAM
 {% endblock title %}
 {% block content %}
     <section class="h-auto">
         <div class="max-w-xs mx-auto mt-10">
-            {% include "register/components/Text_title.html" with title_text="Crear una cuenta" %}
+            {% include "register/components/text_title.html" with title_text="Iniciar sesion" %}
             <div class="bg-blanco mt-6 py-4 px-4  rounded-lg border-2 border-verder_claro  font-Courier_New shadow shadow-verder_claro">
                 <form action="" method="post">
                     {% csrf_token %}
-                    {% include "register/components/Input.html" with id="username" name="username" label="Nombre" type="text" %}
-                    {% include "register/components/Input.html" with id="password1" name="password1" label="Contraseña" type="password" %}
-                    {% include "register/components/Input.html" with id="password2" name="password2" label="Confirme su contraseña" type="password" %}
+                    {% include "register/components/input.html" with id="username" name="username" label="Nombre" type="text" %}
+                    {% include "register/components/input.html" with id="password1" name="password" label="Contraseña" type="password" %}
                     <p class="flex justify-center gap-4 items-center my-2">
-                        <input type="checkbox" name="terminos" id="terminos">
-                        <span>Acepta los terminos y condiciones</span>
+                        <input type="checkbox" name="sesion" id="sesion">
+                        <span>Mantenerme registrado</span>
                     </p>
                     <button class="bg-verder_claro text-blanco font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
-                        Registrarse
+                        Iniciar sesion
                     </button>
                 </form>
             </div>

@@ -1,12 +1,22 @@
 {% load static %}
 <header class="bg-verder_claro flex justify-between items-center p-2 shadow-sm">
-    <img src="{% static 'img/Logo.png' %}" alt="logo" class="h-14 w-auto" width="" height="">
-    <h1 class="text-4xl font-bold text-white font-matemasie">
-        Chisme <span class="text-naranja_claro p-0">Uleam</span>
-    </h1>
-
+    <img src="{% static 'img/Logo.png' %}"
+         alt="logo"
+         class="h-14 w-auto"
+         width=""
+         height="">
+    <div class="flex justify-center">
+        <a href="">
+            <h1 class="text-4xl font-bold text-white font-matemasie ">
+                Chismes <span class="text-naranja_claro p-0">Uleam</span>
+            </h1>
+        </a>
+    </div>
+    
     <div class="font-Courier_New flex gap-2">
-        <a href="#" class="block  py-2 px-4 rounded-md bg-blanco text-negro font-bold transition-scale-102">Iniciar Sesión</a>
-        <a href="#" class="block py-2 px-4 rounded-md bg-naranja_claro text-white font-bold transition-scale-102">Registrarse</a>
-    </div>  
+        <a href="{% url 'register:login' %}"
+           class="block  py-2 px-4 rounded-md bg-blanco text-negro font-bold transition-scale-102">Iniciar Sesión</a>
+        <a href="{% url 'register:signup' %}"
+           class="block py-2 px-4 rounded-md bg-naranja_claro text-white font-bold transition-scale-102">Registrarse</a>
+    </div>
 </header>
