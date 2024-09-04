@@ -15,6 +15,15 @@
                         <input type="checkbox" name="sesion" id="sesion">
                         <span>Mantenerme registrado</span>
                     </p>
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="bg-verde_claro text-blanco font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
                     <button class="bg-verder_claro text-blanco font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
                         Iniciar sesion
                     </button>
