@@ -749,6 +749,40 @@ select {
   --tw-contain-style:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .static {
   position: static;
 }
@@ -783,16 +817,16 @@ select {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-14 {
   height: 3.5rem;
 }
 
 .h-auto {
   height: auto;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .w-auto {
@@ -853,6 +887,11 @@ select {
   background-color: rgb(236 231 226 / var(--tw-bg-opacity));
 }
 
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
 .bg-naranja_claro {
   --tw-bg-opacity: 1;
   background-color: rgb(240 158 106 / var(--tw-bg-opacity));
@@ -902,6 +941,10 @@ select {
   font-family: Matemasie, sans-serif;
 }
 
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -912,8 +955,21 @@ select {
   line-height: 2.5rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.tracking-normal {
+  letter-spacing: 0em;
 }
 
 .text-blanco {
