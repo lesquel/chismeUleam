@@ -1,11 +1,16 @@
 import { postInformation } from '../../utils/api/postInformation.js';
-
+import { createLoader } from '../../components/loader/loader.js';
 
 const fun = (event) => {
     event.preventDefault();
     const form = event.target;
     const url = form.action;
     const dataToSend = new FormData(form);
+
+    let loader;
+    const inicialAction = () => {
+        loader = createLoader();
+    };
     
     const responseAction = (data) => {
         if (data.success) {
@@ -19,10 +24,16 @@ const fun = (event) => {
     };
 
     const errorAction = (error) => {
-        console.error(error);
+        document.getElementById('error-message').innerHTML = error;
     };
 
-    postInformation({ url, dataToSend, responseAction, errorAction });
+    const finallyAction = () => {
+        loader.remove();
+    };
+
+    postInformation({ url, dataToSend, inicialAction, responseAction, errorAction, finallyAction });
 }
 
 document.addEventListener('submit', fun);
+
+

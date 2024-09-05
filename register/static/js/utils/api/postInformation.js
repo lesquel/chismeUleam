@@ -1,5 +1,5 @@
-import { getCookie } from '../Cookie/getCookie.js';
-export const postInformation = ({ url, dataToSend, responseAction, errorAction }) => {
+export const postInformation = ({ url, dataToSend, inicialAction, responseAction, errorAction, finallyAction }) => {
+    inicialAction();
     fetch(url, {
         method: 'POST',
         headers: {
@@ -13,5 +13,8 @@ export const postInformation = ({ url, dataToSend, responseAction, errorAction }
     })
     .catch((error) => {
         errorAction(error);
+    })
+    .finally(() => {
+        finallyAction();
     });
 };
