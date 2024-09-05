@@ -42,4 +42,7 @@ Sign up | CHISMES ULEAM
     </div>
 </section>
 <script src="{% static 'js/controllers/api/postControllersSigup.js' %}" type="module"></script>
+<script>
+    const url = "{% url 'register:signup' %}";
+</script>
 {% endblock content %}

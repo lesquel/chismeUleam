@@ -9,10 +9,12 @@ const fun = (event) => {
     
     const responseAction = (data) => {
         if (data.success) {
-            window.location.href = "{% url 'main:home' %}";
+            window.location.href = "/";
+            return;
         }
         if (data.error) {
             document.getElementById('error-message').innerHTML = data.error;
+            return;
         }
     };
 

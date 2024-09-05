@@ -47,17 +47,14 @@ def login_view(request):
         #Obtiene datos del usuario y valida si existe 
         user = User.objects.filter(username=username).first()
         if user is None:
-            messages.error(request, "El usuario no existe.")
-            return render(request, 'register/pages/login.html')
+            return JsonResponse({"error": "El usuario no existe."})
         # Valida la contraseña del usuario
         user = authenticate(request, username=username, password=password)
         if user is None:
-            messages.error(request, "La contraseña es incorrecta.")
-            return render(request, 'register/pages/login.html')
+            return JsonResponse({"error": "La contraseña es incorrecta."})
         #Loguea al usuario y lo redirige a la pagina principal
         login(request, user)
-        messages.success(request, "Sesión iniciada exitosamente.")
-        return redirect('main:home')
+        return JsonResponse({"success": "Sesión iniciada exitosamente."})
     
     #Si el metodo es GET, muestra la pagina de login
     return render(request, 'register/pages/login.html')
