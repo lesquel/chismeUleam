@@ -7,7 +7,7 @@
         <div class="max-w-xs mx-auto mt-10">
             {% include "register/components/text_title.html" with title_text="Iniciar sesion" %}
             <div class="bg-blanco mt-6 py-4 px-4  rounded-lg border-2 border-verder_claro  font-Courier_New shadow shadow-verder_claro">
-                <form action="" method="post">
+                <form id="login-form" action="{% url 'register:login' %}" method="post">
                     {% csrf_token %}
                     {% include "register/components/input.html" with id="username" name="username" label="Nombre" type="text" %}
                     {% include "register/components/input.html" with id="password1" name="password" label="Contraseña" type="password" %}
