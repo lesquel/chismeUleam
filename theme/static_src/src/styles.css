@@ -8,7 +8,7 @@
         @apply transition-transform duration-200 hover:scale-[1.02];
     }
     .loader-div-container {
-        @apply w-full h-screen flex justify-center items-center fixed top-0 left-0 backdrop-blur-sm
+        @apply w-full h-screen flex justify-center items-center fixed top-0 left-0 backdrop-blur-sm bg-black
     }
     
 }
