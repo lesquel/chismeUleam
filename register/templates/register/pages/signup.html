@@ -1,61 +1,42 @@
 {% extends "register/layout/base_register.html" %}
 {% load static %}
 {% block title %}
-    Sign up | CHISMES ULEAM
+Sign up | CHISMES ULEAM
 {% endblock title %}
 {% block content %}
-    <section class="h-auto">
-        <div class="max-w-xs mx-auto mt-10">
-            {% include "register/components/text_title.html" with title_text="Crear una cuenta" %}
-            <div class="bg-blanco mt-6 py-4 px-4  rounded-lg border-2 border-verder_claro  font-Courier_New shadow shadow-verder_claro">
-                <form id="signup-form" method="post">
-                    {% csrf_token %}
-                    {% include "register/components/input.html" with id="username" name="username" label="Nombre" type="text" %}
-                    {% include "register/components/input.html" with id="password1" name="password1" label="Contraseña" type="password" %}
-                    {% include "register/components/input.html" with id="password2" name="password2" label="Confirme su contraseña" type="password" %}
+<section class="h-auto">
+    <div class="max-w-xs mx-auto mt-10">
+        {% include "register/components/text_title.html" with title_text="Crear una cuenta" %}
+        <div
+            class="bg-blanco mt-6 py-4 px-4  rounded-lg border-2 border-verder_claro  font-Courier_New shadow shadow-verder_claro">
+            <form id="signup-form" method="post">
+                {% csrf_token %}
+                {% include "register/components/input.html" with id="username" name="username" label="Nombre" type="text" %}
+                {% include "register/components/input.html" with id="password1" name="password1" label="Contraseña" type="password" %}
+                {% include "register/components/input.html" with id="password2" name="password2" label="Confirme su contraseña" type="password" %}
 
-                    {% if messages %}   
-                        {% for message in messages %}
-                            <div class="bg-verde_claro text-naranja_claro font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
-                                {{ message }}
-                            </div>
-                        {% endfor %}
-                    {% endif %}
+                {% if messages %}
+                {% for message in messages %}
+                <div
+                    class="bg-verde_claro text-naranja_claro font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
 
-                    <p class="flex justify-center gap-4 items-center my-2">
-                        <input type="checkbox" name="terminos" id="terminos">
-                        <span>Acepta los terminos y condiciones</span>
-                    </p>
+                <p class="flex justify-center gap-4 items-center my-2">
+                    <input type="checkbox" name="terminos" id="terminos">
+                    <span>Acepta los terminos y condiciones</span>
+                </p>
 
 
-                    <button class="bg-verder_claro text-blanco font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
-                        Registrarse
-                    </button>
-                </form>
-            </div>
+                <button
+                    class="bg-verder_claro text-blanco font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
+                    Registrarse
+                </button>
+            </form>
         </div>
-        <!-- <script src="{% static 'js/controllers/api/postControllers.js' %}" type="module"></script> -->
-    </section>
-<script>
-    const fun = (event) => {
-        console.log('Form submit')
-        event.preventDefault()
-        const form = event.target
-        const url = form.action
-        const data = new FormData(form)
-        const request = new Request(url, {
-            method: 'POST',
-            body: data,
-            headers: {
-                'X-CSRFToken': data.get('csrfmiddlewaretoken')
-            }
-        })
-        const response = fetch(request)
-            .then(response => response.text())
-            .then(data => {
-                console.log(data)
-            })
-    }
-    document.addEventListener('submit', fun)
-</script>
+    </div>
+</section>
+<script src="{% static 'js/controllers/api/postControllersSigup.js' %}" type="module"></script>
 {% endblock content %}

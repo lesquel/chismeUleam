@@ -1,14 +1,12 @@
 import { postInformation } from '../../utils/api/postInformation.js';
 
 
-document.addEventListener('submit', (event) => {
+const fun = (event) => {
     event.preventDefault();
     const form = event.target;
     const url = form.action;
     const dataToSend = new FormData(form);
-
-    console.log('Datos a enviar:', ...dataToSend.entries()); 
-
+    
     const responseAction = (data) => {
         console.log(data);
     };
@@ -18,4 +16,6 @@ document.addEventListener('submit', (event) => {
     };
 
     postInformation({ url, dataToSend, responseAction, errorAction });
-});
+}
+
+document.addEventListener('submit', fun);

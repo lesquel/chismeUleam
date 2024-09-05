@@ -12,9 +12,9 @@ import json
 def signup_view(request):
     if request.method == 'POST':
         username = request.POST['username']
-        password1 = request.POST['password']
+        password1 = request.POST['password1']
         password2 = request.POST['password2']
-        # terminos = request.POST.get('terminos')
+        terminos = request.POST.get('terminos')
 
         if password1 != password2:
             return JsonResponse({"error": "Las contraseñas no coinciden."})
@@ -25,8 +25,8 @@ def signup_view(request):
         if User.objects.filter(username=username).exists():
             return JsonResponse({"error": "El nombre de usuario ya está en uso."})
 
-        # if terminos != 'on':
-        #     return JsonResponse({"error": "Debes aceptar los términos y condiciones."})
+        if terminos != 'on':
+            return JsonResponse({"error": "Debes aceptar los términos y condiciones."})
 
         user = User.objects.create_user(username=username, password=password1)
         login(request, user)
