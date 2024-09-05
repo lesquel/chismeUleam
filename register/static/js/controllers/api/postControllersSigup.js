@@ -8,7 +8,12 @@ const fun = (event) => {
     const dataToSend = new FormData(form);
     
     const responseAction = (data) => {
-        console.log(data);
+        if (data.success) {
+            window.location.href = "{% url 'main:home' %}";
+        }
+        if (data.error) {
+            document.getElementById('error-message').innerHTML = data.error;
+        }
     };
 
     const errorAction = (error) => {

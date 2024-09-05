@@ -18,14 +18,11 @@ def signup_view(request):
 
         if password1 != password2:
             return JsonResponse({"error": "Las contraseñas no coinciden."})
-
-        if len(password1) < 8:
+        elif len(password1) < 8:
             return JsonResponse({"error": "La contraseña debe tener al menos 8 caracteres."})
-
-        if User.objects.filter(username=username).exists():
+        elif User.objects.filter(username=username).exists():
             return JsonResponse({"error": "El nombre de usuario ya está en uso."})
-
-        if terminos != 'on':
+        elif terminos != 'on':
             return JsonResponse({"error": "Debes aceptar los términos y condiciones."})
 
         user = User.objects.create_user(username=username, password=password1)
