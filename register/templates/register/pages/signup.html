@@ -9,13 +9,29 @@
             <div class="bg-blanco mt-6 py-4 px-4  rounded-lg border-2 border-verder_claro  font-Courier_New shadow shadow-verder_claro">
                 <form action="" method="post">
                     {% csrf_token %}
-                    {% include "register/components/input.html" with id="username" name="username" label="Nombre" type="text" %}
-                    {% include "register/components/input.html" with id="password1" name="password1" label="Contraseña" type="password" %}
-                    {% include "register/components/input.html" with id="password2" name="password2" label="Confirme su contraseña" type="password" %}
+                    <p class="flex flex-col my-2">
+                        {% include "register/components/input.html" with id="username" label="Nombre" %}
+                        {{ form.username }}
+                    </p>
+                    <p class="flex flex-col my-2">
+                        {% include "register/components/input.html" with id="paswword1" label="Contrasena" %}
+                        {{ form.password1 }}
+                    </p>
+                    <p class="flex flex-col my-2">
+                        {% include "register/components/input.html" with id="password2" label="Confirmar contrasena" %}
+                        {{ form.password2 }}
+                    </p>
                     <p class="flex justify-center gap-4 items-center my-2">
-                        <input type="checkbox" name="terminos" id="terminos">
+                        {{ form.checkbox }}
                         <span>Acepta los terminos y condiciones</span>
                     </p>
+                    {% comment %} {% if messages %}
+                        <div>
+                            {% for message in messages %}
+                                <div class="{% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</div>
+                            {% endfor %}
+                        </div>
+                    {% endif %} {% endcomment %}
                     <button class="bg-verder_claro text-blanco font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
                         Registrarse
                     </button>
