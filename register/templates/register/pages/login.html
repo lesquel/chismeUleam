@@ -1,4 +1,5 @@
 {% extends "register/layout/base_register.html" %}
+{% load static %}
 {% block title %}
     Login | CHISMES ULEAM
 {% endblock title %}
@@ -7,7 +8,7 @@
         <div class="max-w-xs mx-auto mt-10">
             {% include "register/components/text_title.html" with title_text="Iniciar sesion" %}
             <div class="bg-blanco mt-6 py-4 px-4  rounded-lg border-2 border-verder_claro  font-Courier_New shadow shadow-verder_claro">
-                <form action="" method="post">
+                <form id="login-form" action="{% url 'register:login' %}" method="post">
                     {% csrf_token %}
                     <p class="flex flex-col my-2">
                         {% include "register/components/input.html" with id="username" label="Nombre" %}
@@ -21,18 +22,16 @@
                         {{ form.checkbox }}
                         <span>Mantenerme registrado</span>
                     </p>
-                    {% comment %} {% if messages %}
-                        <div>
-                            {% for message in messages %}
-                                <div class="{% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</div>
-                            {% endfor %}
-                        </div>
-                    {% endif %} {% endcomment %}
+
+                    <p id="error-message" class="text-naranja_claro"></p>
+
                     <button class="bg-verder_claro text-blanco font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
                         Iniciar sesion
                     </button>
                 </form>
             </div>
         </div>
+        
+        <script src="{% static 'js/controllers/api/postControllersSigup.js' %}" type="module"></script>
     </section>
 {% endblock content %}

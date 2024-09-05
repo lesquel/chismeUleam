@@ -45,6 +45,8 @@ INSTALLED_APPS = [
 
     # custom apps
     'register.apps.RegisterConfig',
+    'API.apps.ApiConfig',
+    'main.apps.MainConfig',
 ]
 
 # Tailwind config

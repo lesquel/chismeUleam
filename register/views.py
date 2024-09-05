@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import  login_required
 from . import forms
 
 # Create your views here.
+
 def signup_view(request):
     if request.user.is_authenticated:
         return redirect('main:home')
@@ -27,11 +28,16 @@ def signup_view(request):
         elif checkbox != 'on':
             return JsonResponse({"error": "Debes aceptar los términos y condiciones."})
 
+            return JsonResponse({"error": "El nombre de usuario ya está en uso."})
+        elif checkbox != 'on':
+            return JsonResponse({"error": "Debes aceptar los términos y condiciones."})
+
         user = User.objects.create_user(username=username, password=password1)
         login(request, user)
         
         return JsonResponse({"success": "Usuario creado exitosamente.", "redirect": reverse('main:home')})
 
+    # Si el método es GET o cualquier otro, muestra la página de registro
     form = forms.SignUpForm()
     # Si el método es GET o cualquier otro, muestra la página de registro
     return render(request, 'register/pages/signup.html', {"form": form})
