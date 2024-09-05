@@ -15,15 +15,6 @@ Sign up | CHISMES ULEAM
                 {% include "register/components/input.html" with id="password1" name="password1" label="Contraseña" type="password" %}
                 {% include "register/components/input.html" with id="password2" name="password2" label="Confirme su contraseña" type="password" %}
 
-                {% if messages %}
-                {% for message in messages %}
-                <div
-                    class="bg-verde_claro text-naranja_claro font-bold py-2 px-4 rounded-lg w-full  my-2 transition-scale-102">
-                    {{ message }}
-                </div>
-                {% endfor %}
-                {% endif %}
-
                 <p class="flex justify-center gap-4 items-center my-2">
                     <input type="checkbox" name="terminos" id="terminos">
                     <span>Acepta los terminos y condiciones</span>

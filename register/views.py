@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import  login_required
 from django.http import JsonResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
-import json
+from django.urls import reverse
 # Create your views here.
 
 @csrf_exempt
@@ -28,11 +28,11 @@ def signup_view(request):
         user = User.objects.create_user(username=username, password=password1)
         login(request, user)
         
-        return JsonResponse({"success": "Usuario creado exitosamente."})
+        return JsonResponse({"success": "Usuario creado exitosamente.", "redirect": reverse('main:home')})
 
     # Si el método es GET o cualquier otro, muestra la página de registro
     return render(request, 'register/pages/signup.html')
-
+@csrf_exempt
 def login_view(request):
     #Si el usuario ya esta autenticado, lo redirige a la pagina principal
     if request.user.is_authenticated:
@@ -54,7 +54,7 @@ def login_view(request):
             return JsonResponse({"error": "La contraseña es incorrecta."})
         #Loguea al usuario y lo redirige a la pagina principal
         login(request, user)
-        return JsonResponse({"success": "Sesión iniciada exitosamente."})
+        return JsonResponse({"success": "Sesión iniciada exitosamente.", "redirect": reverse('main:home')})
     
     #Si el metodo es GET, muestra la pagina de login
     return render(request, 'register/pages/login.html')

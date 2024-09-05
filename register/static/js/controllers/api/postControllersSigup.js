@@ -14,7 +14,7 @@ const fun = (event) => {
     
     const responseAction = (data) => {
         if (data.success) {
-            window.location.href = "/";
+            window.location.href = data.redirect;
             return;
         }
         if (data.error) {
