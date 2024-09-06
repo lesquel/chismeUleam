@@ -40,5 +40,3 @@ const fun = (event) => {
 }
 // Se agrega un event listener al formulario para que se ejecute la función cuando se envíe el formulario
 document.addEventListener('submit', fun);
-
-
