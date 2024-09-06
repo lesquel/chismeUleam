@@ -10,5 +10,4 @@
     .loader-div-container {
         @apply w-full h-screen flex justify-center items-center fixed top-0 left-0 backdrop-blur-sm;
     }
-    
 }
