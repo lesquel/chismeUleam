@@ -956,7 +956,3 @@ select {
   --tw-scale-y: 1.02;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-
-/* .loader-div-container {
-        @apply w-full h-screen flex justify-center items-center fixed top-0 left-0 backdrop-blur-sm bg-black
-    } */
