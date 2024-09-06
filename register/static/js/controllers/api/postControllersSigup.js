@@ -18,7 +18,13 @@ const fun = (event) => {
             return;
         }
         if (data.error) {
-            document.getElementById('error-message').innerHTML = data.error;
+            let messageData = JSON.parse(data.error);
+            console.log(messageData.__all__);
+                // let message = '';
+                // for (let key in messageData.__all__) {
+                //     message += `${key}: ${messageData[key]}`;
+                // }
+            document.getElementById('error-message').innerHTML = message;
             return;
         }
     };
@@ -37,3 +43,4 @@ const fun = (event) => {
 document.addEventListener('submit', fun);
 
 
+{error: '{"__all__": [{"message": "Por favor, introduzca un…s a may\\u00fasculas.", "code": "invalid_login"}]}'}

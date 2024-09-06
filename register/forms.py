@@ -2,12 +2,14 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 
+INPUT_STYLE = "bg-blanco border-2 border-verder_claro rounded-lg focus:border-verder_claro focus:ring-verder_claro"
+CHECKBOX_STYLE = "bg-blanco border-2 border-verder_claro focus:border-verder_claro focus:ring-verder_claro"
 
 class SignUpForm(UserCreationForm):
     username = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                "class": "bg-blanco border-2 border-verder_claro rounded-lg focus:border-verder_claro focus:ring-verder_claro",
+                "class": INPUT_STYLE,
                 "placeholder": "Ingrese su usuario",
             }
         )
@@ -15,7 +17,7 @@ class SignUpForm(UserCreationForm):
     password1 = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
-                "class": "bg-blanco border-2 border-verder_claro rounded-lg focus:border-verder_claro focus:ring-verder_claro",
+                "class": INPUT_STYLE,
                 "placeholder": "Ingrese su contrasena",
             }
         )
@@ -23,7 +25,7 @@ class SignUpForm(UserCreationForm):
     password2 = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
-                "class": "bg-blanco border-2 border-verder_claro rounded-lg focus:border-verder_claro focus:ring-verder_claro",
+                "class": INPUT_STYLE,
                 "placeholder": "Confirme su contrasena",
             }
         )
@@ -31,7 +33,7 @@ class SignUpForm(UserCreationForm):
     checkbox = forms.BooleanField(
         widget=forms.CheckboxInput(
             attrs={
-                "class": "bg-blanco border-2 border-verder_claro focus:border-verder_claro focus:ring-verder_claro",
+                "class": CHECKBOX_STYLE,
             }
         )
     )
@@ -45,7 +47,7 @@ class LoginForm(AuthenticationForm):
     username = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                "class": "bg-blanco border-2 border-verder_claro rounded-lg focus:border-verder_claro focus:ring-verder_claro",
+                "class": INPUT_STYLE,
                 "placeholder": "Ingrese su usuario",
             }
         )
@@ -54,7 +56,7 @@ class LoginForm(AuthenticationForm):
     password = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
-                "class": "bg-blanco border-2 border-verder_claro rounded-lg focus:border-verder_claro focus:ring-verder_claro",
+                "class": INPUT_STYLE,
                 "placeholder": "Ingrese su contrasena",
             }
         )
@@ -63,7 +65,7 @@ class LoginForm(AuthenticationForm):
         required=False,
         widget=forms.CheckboxInput(
             attrs={
-                "class": "bg-blanco border-2 border-verder_claro focus:border-verder_claro focus:ring-verder_claro",
+                "class": CHECKBOX_STYLE,
             },
         ),
     )
