@@ -25,8 +25,7 @@ def signup_view(request):
                 "redirect": reverse('main:home')
             })
         # Si el formulario no es valido, retornar los errores en formato JSON
-        print(form.errors.as_json())
-        return JsonResponse({"error": form.errors.as_json()}, status=400)
+        return JsonResponse({"error": form.errors.as_json()})
 
     # Si el metodo es GET, retornar el formulario de registro
     form = forms.SignUpForm()
@@ -55,7 +54,7 @@ def login_view(request):
 
         print(form.errors.as_json())
         # Si el formulario no es valido, retornar los errores en formato JSON
-        return JsonResponse({"error": form.errors.as_json()}, status=400)
+        return JsonResponse({"error": form.errors.as_json()})
     
     form = forms.LoginForm()
     return render(request, 'register/pages/login.html', {"form": forms.LoginForm})
