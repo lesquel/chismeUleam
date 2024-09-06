@@ -44,6 +44,7 @@ def login_view(request):
                 "redirect": reverse('main:home')
             })
 
+        print(form.errors.as_json())
         # Return form errors as JSON response
         return JsonResponse({"error": form.errors.as_json()}, status=400)
     
