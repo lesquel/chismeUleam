@@ -50,9 +50,9 @@ module.exports = {
             },
             colors: {
                 naranja_claro: {
-                    light: "#F09E6A",
-                    DEFAULT: "#F09E6A",
-                    dark: "#F09E6A",
+                    light: "#F39B7F",
+                    DEFAULT: "#F39B7F",
+                    dark: "#F39B7F",
                 },
                 verder_claro: {
                     light: "#4A7766",
