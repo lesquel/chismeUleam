@@ -18,17 +18,15 @@ const mensajeErrorFuncHandler = ({mensajeError}) => {
 
 // messageDataFuncHandler es una función que se ejecuta cuando ocurre un error en la petición
 
-let messageErrorForm = [];
 const messageDataFuncHandler = ({messageData}) => {
     // Se borran los elementos del array messageErrorForm
-    if (messageErrorForm) messageErrorForm.forEach(element => element.remove());
+    let errorMessageInputPersona = document.querySelectorAll('.error-message-input-persona');
+    if (errorMessageInputPersona) errorMessageInputPersona.forEach(element => element.remove());
     // Se recorre cada elemento del array messageData
     for (let key in messageData) {
         let mensajeError = mensajeErrorFuncHandler({ mensajeError: messageData[key] });
-        messageErrorForm.push(createMessageErrorForm({ keyName: key, mensajeErrors: mensajeError }));
+        createMessageErrorForm({ keyName: key, mensajeErrors: mensajeError })
     }
-    // Se agregan los elementos del array messageErrorForm al elemento con la clase error-message
-    messageErrorForm = [];
 }
 
 // responseAction es una función que se ejecuta cuando la petición se ha realizado correctamente
