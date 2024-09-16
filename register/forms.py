@@ -33,6 +33,7 @@ class SignUpForm(UserCreationForm):
         )
     )
     checkbox = forms.BooleanField(
+        required=False,
         widget=forms.CheckboxInput(
             attrs={
                 "class": CHECKBOX_STYLE,

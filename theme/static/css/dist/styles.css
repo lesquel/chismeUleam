@@ -847,7 +847,7 @@ select {
 
 .bg-naranja_claro {
   --tw-bg-opacity: 1;
-  background-color: rgb(240 158 106 / var(--tw-bg-opacity));
+  background-color: rgb(243 155 127 / var(--tw-bg-opacity));
 }
 
 .bg-verder_claro {
@@ -915,7 +915,7 @@ select {
 
 .text-naranja_claro {
   --tw-text-opacity: 1;
-  color: rgb(240 158 106 / var(--tw-text-opacity));
+  color: rgb(243 155 127 / var(--tw-text-opacity));
 }
 
 .text-negro {
@@ -943,6 +943,12 @@ select {
 .shadow-verder_claro {
   --tw-shadow-color: #4A7766;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .transition-scale-102 {
